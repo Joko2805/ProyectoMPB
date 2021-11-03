@@ -4,29 +4,28 @@ import java.io.Serializable;
 
 public class Cargo implements Serializable {
 
-	/**
-	 * 
-	 */
 	private static final long serialVersionUID = 1L;
-	private Integer idCargo;
+	
+	private Integer cargoId;
 	private String descripcion;
 	private Byte estado;
-	
-	public Cargo () {};
-	
-	public Cargo(Integer idCargo, String descripcion, Byte estado) {
+
+	public Cargo() {
+	}
+
+	public Cargo(Integer cargoId, String descripcion, Byte estado) {
 		super();
-		this.idCargo = idCargo;
+		this.cargoId = cargoId;
 		this.descripcion = descripcion;
 		this.estado = estado;
 	}
 
-	public Integer getIdCargo() {
-		return idCargo;
+	public Integer getCargoId() {
+		return cargoId;
 	}
 
-	public void setIdCargo(Integer idCargo) {
-		this.idCargo = idCargo;
+	public void setCargoId(Integer cargoId) {
+		this.cargoId = cargoId;
 	}
 
 	public String getDescripcion() {
@@ -44,11 +43,4 @@ public class Cargo implements Serializable {
 	public void setEstado(Byte estado) {
 		this.estado = estado;
 	}
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
-	}
-	
-	
-	
 }
