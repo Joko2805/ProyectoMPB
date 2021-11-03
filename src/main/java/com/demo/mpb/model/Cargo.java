@@ -11,6 +11,7 @@ public class Cargo implements Serializable {
 	private Byte estado;
 
 	public Cargo() {
+		super();
 	}
 
 	public Cargo(Integer cargoId, String descripcion, Byte estado) {
