@@ -1,15 +1,26 @@
 package com.demo.mpb.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="grados")
 public class Grado implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name= "grado_id")
 	private Integer gradoId;
+	@Column(length = 50)
 	private String nombre;
+	@Column 
 	private Byte estado;
-
+	@OneToMany(mappedBy = "grado", cascade = {CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REMOVE})
+    private List<Seccion> itemSeccion =new ArrayList<>();
 	public Grado() {
 	}
 
